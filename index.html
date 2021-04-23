@@ -4,6 +4,44 @@
 <title> Sayaji Reservation Form </title>
 </head>
 <body>
+  <script>
+              var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+   var x= document.getElementById('email').value;
+            if(regx==x){
+      return true;
+    }
+    else{
+      alert("This is not a valid email address");
+      return false;
+    }
+    
+      var regexx = /^\(?\d{3}\)?-?\s*-?\d{4}$/;
+    var y = document.getElementById('phone').value;
+    if(regxx==y)){
+   return true;
+    }
+    else{
+      alert("This is not a valid phone number");
+      return false;
+  }
+    
+     var regexz = /^[a-zA-Z]+$/;
+    var z= document.getElementById('phone').value;
+    if(regexz.test(z) == false){
+   alert("Name must be in alphabets only");
+   letters.yourname.focus();
+   return false;
+    }
+    if(letters.yourname.value == " "){
+      alert("Name Field cannot be left empty");
+      letters.yourname.focus();
+      return false;
+    }
+    return true;
+  }
+    
+    
+        </script>
 <marquee>Welcome to Sayaji Pune. In the wake of COVID-19 we request you to kindly make reservations before visiting our hotel in order to avoid any type of inconvenience! </marquee>
 <h1> <b> <i> *****FIVE, HOTEL***** </i></b></h1>
 <form action="nextpage.html" method="GET">
